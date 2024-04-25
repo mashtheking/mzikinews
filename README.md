@@ -1,5 +1,4 @@
-# React Typescript Innoscripta-news-app Applcation
-
+# React Typescript Innoscripta News Application
 
 A single-page application was built using React, Typescript, and TawilwindCss. It is the user interface for a news aggregator website that pulls articles from various sources and displays them in a clean,
 easy-to-read format. 
