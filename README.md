@@ -23,7 +23,7 @@ clone Innoscripta-news-app to your local machine. Then
 to install its dependencies run
 
 ```sh
-yarn install or npm install
+npm install
 ```
 
 Create a copy of .env.example file and call it .env; the default backend API key is provided in the .env.example.
@@ -37,7 +37,7 @@ cp .env.example .env
 The application can be deployed using Docker. clone the repo and run the docker build command inside the project's directory.
 
 ```sh
-docker build -t Innoscripta-news-app:latest.
+docker build -t news-app:latest .
 ```
 
 then create a container from the created image.
@@ -48,17 +48,10 @@ then create a container from the created image.
  - **TypeScript**: A superset of JavaScript that adds static types, enhancing code quality and maintainability in the React app.
  - - Tailwind CSS - A utility-first CSS framework.
  - **Prettifier**: Code formatting is maintained with Prettier, ensuring a consistent and clean codebase.
- - **ESLint**: The project utilizes ESLint for static code analysis, helping catch potential issues and enforcing coding standards.
  - **Docker**: The React app is containerized using Docker, providing consistency in deployment across various environments.
  - **Nginx**: A high-performance web server used to serve the React app, ensuring efficient handling of HTTP requests
 
 ## Configuration
-The `.env.example` file gives you the default port for the frontend and the `API-Keys`. Just copy it, rename the copy to `.env`, and you're good to go. If you've tweaked the backend app's config, remember to update the environmental config in the frontend's `.env` file.
+The `.env.example` file gives you the default port for the front end and the `API keys`. Just copy it, rename the copy to `.env`, and you're good to go. If you've tweaked the backend app's config, remember to update the environmental config in the frontend's `.env` file.
 
-## Conclusion
-
-A single-page application was built using React, Typescript, and TawilwindCss. It is the user interface for a news aggregator website that pulls articles from various sources and displays them in a clean,
-easy-to-read format. 
-The application generates Breaking news from 3 sources that are NewsAPI.org, the New York Times and The Guardian, and users can search for articles by keyword and filter the results by date and category.
-Also, users can personalized news feed that able to customize their news feed by selecting their preferred source and categories.
 
