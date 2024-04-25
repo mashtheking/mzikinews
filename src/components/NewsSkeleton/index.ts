@@ -1,0 +1,1 @@
+export { NewsSkeleton } from './NewsSkeleton'
