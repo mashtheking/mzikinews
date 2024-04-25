@@ -1,21 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useScrollEnd } from './useScrollEnd'
+import { INewsItem } from '../types'
 
 const PAGE_SIZE = 20
 
-interface MusicVideoType {
-  id: number
-  artist: string
-  title: string
-  release_year: number
-  genre_id: number
-  image_url: string
-}
-
-type Items = MusicVideoType[]
-
 export function useLazyLoad(
-  items: Items,
+  items: INewsItem[],
   loaderTriggerElement: HTMLElement | null,
 ) {
   const lastItems = useRef<{} | null>(null)

@@ -1,8 +1,9 @@
 import { useRef } from 'react'
 import { Card } from '../Card'
 import { useLazyLoad } from '../../hooks/useLazyLoad'
+import { INewsItem } from '../../types'
 
-export const NewsList = ({ items }: any) => {
+export const NewsList = ({ items }: { items: INewsItem[] }) => {
   const loaderTriggerRef = useRef(null)
   const { visibleItems, isLastPage } = useLazyLoad(
     items,

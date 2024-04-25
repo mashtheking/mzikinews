@@ -1,3 +1,5 @@
+import { INewsItem } from '../types'
+
 export const isValidDate = (dateString: string) => {
   var regex = /^\d{4}-\d{2}-\d{2}$/
 
@@ -15,10 +17,10 @@ export const isValidDate = (dateString: string) => {
 
 export const filterNews = (
   selectedSources: any,
-  allBreakingNewsData: any[],
-  allNewsApiData: any[],
-  allNewYorkTimesData: any[],
-  allTheGuardianData: any[],
+  allBreakingNewsData: INewsItem[],
+  allNewsApiData: INewsItem[],
+  allNewYorkTimesData: INewsItem[],
+  allTheGuardianData: INewsItem[],
 ) => {
   if (
     !selectedSources ||
@@ -28,7 +30,7 @@ export const filterNews = (
     return allBreakingNewsData
   }
 
-  let filteredNews: any[] = []
+  let filteredNews: INewsItem[] = []
   selectedSources.forEach((source: any) => {
     if (source.value === 1) {
       filteredNews = [...filteredNews, ...allNewsApiData]

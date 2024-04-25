@@ -1,4 +1,6 @@
-export const Card = ({ item }: any) => {
+import { INewsItem } from '../../types'
+
+export const Card = ({ item }: { item: INewsItem }) => {
   const startsWithStatic01Nyt = (url: string) => {
     return url.startsWith('https://static01.nyt.com/')
   }
@@ -8,17 +10,23 @@ export const Card = ({ item }: any) => {
     item?.multimedia[2]?.url &&
     startsWithStatic01Nyt(item?.multimedia[2]?.url)
       ? item?.multimedia[2]?.url
-      : item?.multimedia?.length > 0
+      : item.multimedia && item?.multimedia?.length > 0
       ? 'https://static01.nyt.com/' + item?.multimedia[2]?.url
       : ''
 
   const articleAuthor = item.author
     ? item.author?.substring(0, 30)
-    : item?.source?.name
+    : typeof item?.source === 'object' &&
+      item?.source !== null &&
+      item?.source?.name
     ? item?.source?.name?.substring(0, 30)
-    : item?.byline?.original
+    : typeof item?.byline === 'object' &&
+      item?.byline !== null &&
+      item?.byline?.original
     ? item?.byline?.original.substring(0, 30)
-    : item?.byline?.length > 0
+    : typeof item?.byline === 'string' &&
+      item?.byline !== null &&
+      item?.byline?.length > 0
     ? item?.byline?.substring(0, 30)
     : item?.sectionName
     ? item?.sectionName?.substring(0, 30)
