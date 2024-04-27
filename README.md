@@ -1,30 +1,57 @@
-# React + TypeScript + Vite
+# React Typescript Innoscripta News Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page application was built using React, Typescript, and TawilwindCss. It is the user interface for a news aggregator website that pulls articles from various sources and displays them in a clean,
+easy-to-read format. 
+The application generates Breaking news from 3 sources that are NewsAPI.org, the New York Times and The Guardian, and users can search for articles by keyword and filter the results by date and category.
+Also, users can personalized news feed that able to customize their news feed by selecting their preferred source and categories.
 
-Currently, two official plugins are available:
+## Demo
+https://innoscripta-news-app.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- The application generates Breaking news from 3 sources that are NewsAPI.org, the New York Times and The Guardian.
+- The user can search for articles by keyword.
+- The user can filter the results by date and category.
+- The user can personalized news feed that able to customize their news feed by selecting their preferred source and categories.
+- Responsive Design
+- A decent UI/UX
+- Error Handling
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Development
+clone Innoscripta-news-app to your local machine. Then
+to install its dependencies run
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Create a copy of .env.example file and call it .env; the default backend API key is provided in the .env.example.
+
+```sh
+cp .env.example .env
+```
+
+
+## Deployment
+The application can be deployed using Docker. clone the repo and run the docker build command inside the project's directory.
+
+```sh
+docker build -t news-app:latest .
+```
+
+then create a container from the created image.
+
+## Technologies
+ - **React**: Utilized for the frontend development of user interfaces.
+ - **Vite**: used as the bundler for the React app; It's a fast build tool for modern web development, and supports typescript out of the box.
+ - **TypeScript**: A superset of JavaScript that adds static types, enhancing code quality and maintainability in the React app.
+ - - Tailwind CSS - A utility-first CSS framework.
+ - **Prettifier**: Code formatting is maintained with Prettier, ensuring a consistent and clean codebase.
+ - **Docker**: The React app is containerized using Docker, providing consistency in deployment across various environments.
+ - **Nginx**: A high-performance web server used to serve the React app, ensuring efficient handling of HTTP requests
+
+## Configuration
+The `.env.example` file gives you the default port for the front end and the `API keys`. Just copy it, rename the copy to `.env`, and you're good to go. If you've tweaked the backend app's config, remember to update the environmental config in the frontend's `.env` file.
+
+
