@@ -15,7 +15,7 @@ export const CardSkeleton = () => {
 }
 
 export const NewsSkeleton = () => {
-  const skeletonRange = Array.from(Array(10).keys()).map((n) => n + 1)
+  const skeletonRange = Array.from(Array(12).keys()).map((n) => n + 1)
 
   return (
     <div className='grid w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 animate-pulse'>

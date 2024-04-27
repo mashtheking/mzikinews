@@ -9,15 +9,14 @@ const categories = [
   { id: 4, title: 'Entertainment' },
   { id: 5, title: 'Science' },
   { id: 6, title: 'Health' },
-  { id: 7, title: 'Business' },
 ]
 
 export const Navbar = () => {
   return (
     <Popover>
-      <div className='fixed backdrop-blur py-4 top-0 z-40 w-full px-4 sm:px-6 lg:px-8 bg-[#003366] p-4'>
+      <div className='fixed backdrop-blur py-4 top-0 z-40 w-full bg-[#003366] p-4'>
         <nav
-          className='container px-5 sm:px-8 xl:px-0 text-lg font-medium max-w-5xl relative flex flex-row items-center justify-between sm:h-10 '
+          className='w-[90%] my-0 mx-auto  text-lg font-medium flex flex-row items-center justify-between sm:h-10'
           aria-label='Global'
         >
           <div className='flex flex-shrink-0 flex-grow items-center lg:flex-grow-0'>
@@ -36,12 +35,12 @@ export const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className='hidden md:ml-10 md:block md:space-x-4 md:pr-2 '>
+          <div className='hidden md:ml-5 md:block '>
             {categories.map((item) => (
               <a
                 key={item.title}
                 // href={item.href}
-                className='font-semibold text-white hover:bg-hoverColor rounded p-2'
+                className='font-semibold text-white hover:bg-hoverColor rounded p-2 cursor-pointer'
               >
                 {item.title}
               </a>

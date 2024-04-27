@@ -349,10 +349,10 @@ export const MainPage: React.FC = () => {
   return (
     <div className='py-7 space-y-7 w-full'>
       <div className='flex items-center justify-between mt-16'>
-        <h1 className='text-xl font-bold px-4 py-2 rounded-lg bg-gray-300'>
+        <h1 className='text-xl font-bold px-4 py-2 rounded-lg bg-[#003366] text-white'>
           {!isEmptyLocalStorage ? 'My Favorite Articles' : 'Breaking News'}
         </h1>
-        <div className='flex items-end justify-between px-4 py-2 rounded-lg bg-gray-300 w-[25%] md:w-[20%] lg:w-[10%]'>
+        <div className='flex items-end justify-between px-4 py-2 rounded-lg bg-[#003366] text-white w-[25%] md:w-[20%] lg:w-[10%]'>
           <button onClick={() => setIsShowSearchInput(!isShowSearchInput)}>
             <MagnifyingGlassIcon className='h-8 w-8' aria-hidden='true' />
           </button>
@@ -362,7 +362,7 @@ export const MainPage: React.FC = () => {
         </div>
       </div>
       {isShowSettings && (
-        <div className='grid  gap-y-5 gap-x-5  bg-gray-300 py-6 px-4 rounded-lg '>
+        <div className='grid  gap-y-5 gap-x-5  bg-[#003366] text-white py-6 px-4 rounded-lg '>
           <p className='text-base font-bold'>
             You can choose your favorite sources and categories
           </p>
@@ -388,7 +388,7 @@ export const MainPage: React.FC = () => {
             />
             <button
               onClick={handleSaveFavorite}
-              className='text-xl p-2 md:p-1 font-bold bg-[#003366] text-white rounded-md col-span-full md:col-span-1'
+              className='text-xl p-2 md:p-1 font-bold bg-white  text-[#003366] rounded-md col-span-full md:col-span-1'
             >
               Save
             </button>
