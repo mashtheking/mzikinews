@@ -346,6 +346,16 @@ export const MainPage: React.FC = () => {
     setLocalStorageData([selectedSource, selectedCategory])
   }
 
+  const handleSearchButtonClick = () => {
+    setIsShowSearchInput(!isShowSearchInput)
+    setIsShowSettings(false)
+  }
+
+  const handleSettingsButtonClick = () => {
+    setIsShowSettings(!isShowSettings)
+    setIsShowSearchInput(false)
+  }
+
   return (
     <div className='py-7 space-y-7 w-full'>
       <div className='flex items-center justify-between mt-16'>
@@ -353,10 +363,10 @@ export const MainPage: React.FC = () => {
           {!isEmptyLocalStorage ? 'My Favorite Articles' : 'Breaking News'}
         </h1>
         <div className='flex items-end justify-between px-4 py-2 rounded-lg bg-[#003366] text-white w-[25%] md:w-[20%] lg:w-[10%]'>
-          <button onClick={() => setIsShowSearchInput(!isShowSearchInput)}>
+          <button onClick={handleSearchButtonClick}>
             <MagnifyingGlassIcon className='h-8 w-8' aria-hidden='true' />
           </button>
-          <button onClick={() => setIsShowSettings(!isShowSettings)}>
+          <button onClick={handleSettingsButtonClick}>
             <Cog8ToothIcon className='h-8 w-8' aria-hidden='true' />
           </button>
         </div>
@@ -411,7 +421,7 @@ export const MainPage: React.FC = () => {
             />
             <button
               type='submit'
-              className='w-[20%] text-lg font-semibold bg-[#C20017] border border-[#C20017] min-h-[38px] p-1.5 text-white rounded-r-md'
+              className='w-[20%] text-xl font-bold bg-[#C20017] border border-[#C20017] min-h-[38px] p-1.5 text-white rounded-r-md'
             >
               Search
             </button>
