@@ -5,6 +5,14 @@ export const Card = ({ item }: { item: INewsItem }) => {
     return url.startsWith('https://static01.nyt.com/')
   }
 
+  const articleUrl = item?.url ? item?.url : item?.webUrl
+
+  const openArticleInNewTab = () => {
+    if (articleUrl) {
+      window.open(articleUrl, '_blank')
+    }
+  }
+
   const nyTimesImageUrl =
     item?.multimedia &&
     item?.multimedia[2]?.url &&
@@ -33,10 +41,10 @@ export const Card = ({ item }: { item: INewsItem }) => {
     : item?.subsection?.substring(0, 30)
 
   const articleTitle = item?.title
-    ? item?.title
+    ? item?.title?.substring(0, 100)
     : item?.webTitle
-    ? item?.webTitle
-    : item?.abstract
+    ? item?.webTitle?.substring(0, 100)
+    : item?.abstract?.substring(0, 100)
 
   const articleImageUrl = item.urlToImage
     ? item.urlToImage
@@ -45,7 +53,10 @@ export const Card = ({ item }: { item: INewsItem }) => {
     : nyTimesImageUrl
 
   return (
-    <div className='rounded-md overflow-hidden shadow-lg cursor-pointer'>
+    <div
+      className='rounded-md overflow-hidden shadow-lg cursor-pointer'
+      onClick={openArticleInNewTab}
+    >
       <div
         className='w-full h-64 object-center bg-cover bg-center'
         style={{
