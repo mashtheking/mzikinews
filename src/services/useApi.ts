@@ -7,7 +7,7 @@ const {
   VITE_APP_THE_GUARDIAN_API_KEY,
 } = import.meta.env
 
-const newsApiKey = VITE_APP_NEWS_API_KEY || 'a3906f4f790f4f2b8c917eb2f3a5621d'
+const newsApiKey =  ''
 const nYTimesKey =
    ''
 const theGuardianAPiKey =
