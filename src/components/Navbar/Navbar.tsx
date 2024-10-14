@@ -25,7 +25,7 @@ export const Navbar = () => {
                 href='/'
                 className='uppercase text-xl font-extrabold text-white hover:text-white'
               >
-                innoscripta news
+                Mziki Africa News
               </a>
               <div className='-mr-2 flex items-center md:hidden'>
                 <Popover.Button className='inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-hoverColor'>
