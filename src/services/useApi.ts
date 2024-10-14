@@ -108,9 +108,9 @@ export function useFetchSearchResultData(
   return {
     searchResultData: mergedArray,
     isSearchResultLoading:
-      (error1 || error2 || error3) &&
-      (!newsApiData || !nYTimesApiData || !theGuardianApiData),
-    isSearchResultError: error1 || error2 || error3,
+      (error3) &&
+      (!theGuardianApiData),
+    isSearchResultError:  error3,
   }
 }
 
