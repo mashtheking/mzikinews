@@ -69,7 +69,7 @@ export const Navbar = () => {
                   href='/'
                   className='uppercase text-xl font-extrabold text-white hover:text-white'
                 >
-                  innoscripta news
+                  MZIKI AFRICA NEWS
                 </a>
               </div>
               <div className='-mr-2'>
