@@ -9,7 +9,7 @@ const {
 
 const newsApiKey = VITE_APP_NEWS_API_KEY || 'a3906f4f790f4f2b8c917eb2f3a5621d'
 const nYTimesKey =
-  VITE_APP_NEW_YORK_TIMES_KEY || 'uvXeQ3yYDdhDsKcSfRWkUAtOHN6tIVYe'
+   ''
 const theGuardianAPiKey =
   VITE_APP_THE_GUARDIAN_API_KEY || '50887b5b-52a9-435f-b5e2-fd0a17568d18'
 
