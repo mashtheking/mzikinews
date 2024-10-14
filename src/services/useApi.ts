@@ -118,13 +118,9 @@ export function useFetchNYTimesSectionListData() {
   const NYTimesSectionUrl =
     'https://api.nytimes.com/svc/news/v3/content/section-list.json?api-key=uvXeQ3yYDdhDsKcSfRWkUAtOHN6tIVYe'
 
-  const { data, error } = useSWR(NYTimesSectionUrl, fetcher)
+  
 
-  return {
-    NYTimesSectionListData: data?.results || [],
-    isNYTimesSectionListDataLoading: !error && !data,
-    isNYTimesSectionListDataError: error,
-  }
+  
 }
 
 export function useFetchTheGuardianSectionListData() {
