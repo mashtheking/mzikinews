@@ -2,8 +2,6 @@ import useSWR from 'swr'
 import axios from 'axios'
 
 const {
-  VITE_APP_NEWS_API_KEY,
-  VITE_APP_NEW_YORK_TIMES_KEY,
   VITE_APP_THE_GUARDIAN_API_KEY,
 } = import.meta.env
 
